@@ -1,0 +1,83 @@
+.Chat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    min-height: 100vh; /* Garante que o chat ocupe toda a altura da tela */
+}
+
+.Footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    border-top: 1px solid #ccc;
+    padding: 1rem;
+}
+
+.MessageDisplay {
+    width: 100%;
+    max-height: calc(100vh - 150px); /* Ajuste a altura máxima conforme necessário */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha as mensagens à esquerda */
+}
+
+.message {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 20px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.message.user {
+    align-self: flex-end;
+    background-color: #dcf8c6;
+    text-align: right;
+}
+
+.message.bot {
+    align-self: flex-start;
+    background-color: #f1f0f0;
+    text-align: left;
+}
+
+.MessageInput {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.MessageInput input {
+    flex: 1;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+}
+
+.MessageInput button {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.MessageInput button:hover {
+    background-color: #0056b3;
+}
